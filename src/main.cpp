@@ -18,14 +18,11 @@
 
 #include <vector>
 
-#include <stdio.h>      // standard input / output functions
 #include <stdlib.h>
 #include <string.h>     // string function definitions
-#include <unistd.h>     // UNIX standard function definitions
 #include <fcntl.h>      // File control definitions
 #include <errno.h>      // Error number definitions
 #include <termios.h>    // POSIX terminal control definitions
-#include <iostream>
 
 /** Function Headers */
 std::vector<int> detectAndDisplay( cv::Mat frame );
@@ -42,83 +39,150 @@ cv::Mat skinCrCbHist = cv::Mat::zeros(cv::Size(256, 256), CV_8UC1);
 using namespace std;
 
 int main( int argc, const char** argv ) {
+  //Initialize Imaging objects  
   CvCapture* capture;
   cv::Mat frame;
 
+  //Initialize Mouse objects
   Display *display = XOpenDisplay(0);
   Window root = DefaultRootWindow(display);
-    //for(int x = 0; x < 1000; x++){for(int y = 0; y < 1000; y++){XWarpPointer(display, None, root, 0, 0, 0, 0, x, y); usleep(100);}}
-  XFlush(display);
 
-
-  XCloseDisplay(display);
-
+  //Open FTDI port
   int USB = open( "/dev/ttyUSB0", O_RDWR| O_NOCTTY );
   struct termios tty;
   struct termios tty_old;
   memset (&tty, 0, sizeof tty);
 
-  /* Error Handling */
   if ( tcgetattr ( USB, &tty ) != 0 )
   {
       cout << "Error " << errno << " from tcgetattr: " << strerror(errno) << endl;
   }
 
-  /* Save old tty parameters */
   tty_old = tty;
-
-  /* Set Baud Rate */
+ 
   cfsetospeed (&tty, (speed_t)B9600);
   cfsetispeed (&tty, (speed_t)B9600);
 
-  /* Setting other Port Stuff */
-  tty.c_cflag     &=  ~PARENB;        // Make 8n1
+  tty.c_cflag     &=  ~PARENB;    
   tty.c_cflag     &=  ~CSTOPB;
   tty.c_cflag     &=  ~CSIZE;
   tty.c_cflag     |=  CS8;
 
-  tty.c_cflag     &=  ~CRTSCTS;       // no flow control
-  tty.c_cc[VMIN]      =   1;                  // read doesn't block
-  tty.c_cc[VTIME]     =   5;                  // 0.5 seconds read timeout
-  tty.c_cflag     |=  CREAD | CLOCAL;     // turn on READ & ignore ctrl lines
-  cout << "test" << flush;
-  /* Make raw */
+  tty.c_cflag     &=  ~CRTSCTS;    
+  tty.c_cc[VMIN]      =   1;           
+  tty.c_cc[VTIME]     =   5;               
+  tty.c_cflag     |=  CREAD | CLOCAL;    
   cfmakeraw(&tty);
-
-  /* Flush Port, then applies attributes */
   tcflush( USB, TCIFLUSH );
+
   if ( tcsetattr ( USB, TCSANOW, &tty ) != 0)
   {
       cout << "Error " << errno << " from tcsetattr" << endl;
   }
 
-    //XWarpPointer(display, None, root, 0, 0, 0, 0, x, y);
   // Load the cascades
   if( !face_cascade.load( face_cascade_name ) ){ printf("--(!)Error loading face cascade, please change face_cascade_name in source code.\n"); return -1; };
 
 
-
+  //TODO: Find out what this does
   createCornerKernels();
   ellipse(skinCrCbHist, cv::Point(113, 155.6), cv::Size(23.4, 15.2),
           43.0, 0.0, 360.0, cv::Scalar(255, 255, 255), -1);
 
   // Read the video stream
   capture = cvCaptureFromCAM( -1 );
-  
+  vector<int> result;
+  if( !frame.empty() ) {
+    result = detectAndDisplay( frame );
+  }
+  int rX=0, rY=0, lX=0, lY=0, tX=0, tY=0, bX=0, bY=0;
   int i = 1;
   bool check = true;
   int x = 960, y = 540;
-  
+  string c;
+
+  //Calibrate the right edge of the screen
+  cout << "look at the right part of the screen";
+  cin >> c;
+  frame = cvQueryFrame( capture );
+  cv::flip(frame, frame, 1);
+  frame.copyTo(debugImage);
+  if( !frame.empty() ) 
+  {
+    result = detectAndDisplay( frame );
+  }
+  if(result.size() >= 2)      
+  {
+    rX = result[0];
+    rY = result[1];
+  }
+
+  //Calibrate the left edge of the screen
+  cout << "look at the left part of the screen";
+  cin >> c;
+  frame = cvQueryFrame( capture );
+  cv::flip(frame, frame, 1);
+  frame.copyTo(debugImage);
+  if( !frame.empty() ) 
+  {
+    result = detectAndDisplay( frame );
+  }
+  if(result.size() >= 2)      
+  {
+    lX = result[0];
+    lY = result[1];
+  }
+
+  //Calibrate the bottom part of the screen
+  cout << "look at the bottom part of the screen";
+  cin >> c;
+  frame = cvQueryFrame( capture );
+  cv::flip(frame, frame, 1);
+  frame.copyTo(debugImage);
+  if( !frame.empty() ) 
+  {
+    result = detectAndDisplay( frame );
+  }
+  if(result.size() >= 2)      
+  {
+    bX = result[0];
+    bY = result[1];
+  }
+
+  //Calibrate the top part of the screen
+  cout << "look at the top part of the screen";
+  cin >> c;
+  frame = cvQueryFrame( capture );
+  cv::flip(frame, frame, 1);
+  frame.copyTo(debugImage);
+  if( !frame.empty() ) 
+  {
+    result = detectAndDisplay( frame );
+  }
+  if(result.size() >= 2)      
+  {
+    tX = result[0];
+    tY = result[1];
+  }
+
+  cout << "TOP: " << tX << " " << tY << endl;
+  cout << "BOTTOM: " << bX << " " << bY << endl;
+  cout << "LEFT: " << lX << " " << lY << endl;
+  cout << "RIGHT: " << rX << " " << rY << endl;
+  //Mouse loop w/ reading serial
   if( capture ) 
   {
     while( check ) 
     {
+      //Capture an image
       frame = cvQueryFrame( capture );
-      // mirror it
+      
+      //Mirror it
       cv::flip(frame, frame, 1);
+
       frame.copyTo(debugImage);
-      // Apply the class>ier to the frame
-      vector<int> result;
+  
+      // Apply the classfier to the frame
       if( !frame.empty() ) {
         result = detectAndDisplay( frame );
       }
@@ -127,133 +191,131 @@ int main( int argc, const char** argv ) {
         printf(" --(!) No captured frame -- Break!");
         break;
       }
+
       //120 ... 130 ... 140
       //0 ... 960 ... 1920 for x
       //45 ... 60 ... 75
       //0 ... 540 ... 1080
-      int dX = result[0] - 130;
-      int dY = result[1] - 60;
-      dX = dX * (1920 / 20);
-      x = x + dX; 
-      dY = dY * (1080/30);
-      y = y + dY;
-      int c = cv::waitKey(10);
-      if( (char)c == 'c' ) { break; }
-      if( (char)c == 'f' ) { }
+
       i++;
-      usleep(10000);
-      //READ
+      cout << i << endl;
+      
+      //Read serial data from Gloves
       int n = 0;
       char buf = '\0';
-
-      /* Whole response*/
       std::string response;
-
-      do
-      {
-         n = read( USB, &buf, 1 );
-         response.append( &buf );
-      }while(buf != '\r' && n > 0);
+    
+      n = read( USB, &buf, 1 );
+      response.append( &buf );
 
       if (n < 0)
       {
          cout << "Error reading: " << strerror(errno) << endl;
       }
-      else if (n == 0)
+      else if (n == 0) 
       {
           cout << "Read nothing!" << endl;
       }
       else
       {
-          cout << "Response: " << response;
-          response = response.substr(1,1);
+          cout << "Response: " << response << endl;
+          
+          //Figure out which key was pressed based on response
           switch(*(response.c_str()))
           {
             case 'a':
-              cout << 'a';
+              cout << 'a' << endl;
               break;
             case 'b':
-              cout << 'b';
+              cout << 'b' << endl;
               break;
             case 'c':
-              cout << 'c';
+              cout << 'c' << endl;
               break;
             case 'd':
-              cout << 'd';
+              cout << 'd' << endl;
               break;
             case 'e':
-              cout << 'e';
+              cout << 'e' << endl;
               break;
             case 'f':
-              cout << 'f';
+              cout << 'f' << endl;
               break;
             case 'g':
-              cout << 'g';
+              cout << 'g' << endl;
               break;
             case 'h':
-              cout << 'h';
+              cout << 'h' << endl;
               break;
             case 'i':
-              cout << 'i';
+              cout << 'i' << endl;
               break;
             case 'j':
-              cout << 'j';
+              cout << 'j' << endl;
               break;
             case 'k':
-              cout << 'k';
+              cout << 'k' << endl;
               break;
             case 'l':
-              cout << 'l';
+              cout << 'l' << endl;
               break;
             case 'm':
-              cout << 'm';
+              cout << 'm' << endl;
               break;
             case 'n':
-              cout << 'n';
+              cout << 'n' << endl;
               break;
             case 'o':
-              cout << 'o';
+              cout << 'o' << endl;
               break;
             case 'p':
-              cout << 'p';
+              cout << 'p' << endl;
               break;
             case 'q':
-              cout << 'q';
+              cout << 'q' << endl;
               break;
             case 'r':
-              cout << 'r';
+              cout << 'r' << endl;
               break;
             case 's':
-              cout << 's';
+              cout << 's' << endl;
               break;
             case 't':
-              cout << 't';
+              cout << 't' << endl;
               break;
             case 'u':
-              cout << 'u';
+              cout << 'u' << endl;
               break;
             case 'v':
-              cout << 'v';
+              cout << 'v' << endl;
               break;
             case 'w':
-              cout << 'w';
+              cout << 'w' << endl;
               break;
             case 'x':
-              cout << 'x';
+              cout << 'x' << endl;
               break;
             case 'y':
-              cout << 'y';
+              cout << 'y' << endl;
               break;
             case 'z':
-              cout << 'z';
+              cout << 'z' << endl;
               break;
           }
       }
-      //XWarpPointer(display, None, root, 0, 0, 0, 0, 960, 540);
+      
+      //Move mouse based on imaging
+      XWarpPointer(display, None, root, 0, 0, 0, 0, 960 + i , 540);
+      XFlush(display);
+
+      //Reset the results vector
+      result.clear();
 
     }
   }
 
+  //Cleanup
+  XCloseDisplay(display);
   releaseCornerKernels();
 
   return 0;
@@ -308,7 +370,7 @@ vector<int> findEyes(cv::Mat frame_gray, cv::Rect face) {
   leftPupil.x += leftEyeRegion.x;
   leftPupil.y += leftEyeRegion.y;
   // draw eye centers
-	//cout << "RIGHT PUPIL X,Y: " << rightPupil.x << " " << rightPupil.y << endl;
+	cout << "RIGHT PUPIL X,Y: " << rightPupil.x << " " << rightPupil.y << endl;
   circle(debugFace, rightPupil, 3, 1234);
   circle(debugFace, leftPupil, 3, 1234);
 
@@ -369,7 +431,8 @@ cv::Mat findSkin (cv::Mat &frame) {
 /**
  * @function detectAndDisplay
  */
-vector<int> detectAndDisplay( cv::Mat frame ) {
+vector<int> detectAndDisplay( cv::Mat frame ) 
+{
   std::vector<cv::Rect> faces;
   //cv::Mat frame_gray;
 

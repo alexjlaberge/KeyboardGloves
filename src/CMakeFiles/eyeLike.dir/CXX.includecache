@@ -45,20 +45,14 @@ X11/Xutil.h
 -
 vector
 -
-stdio.h
--
 stdlib.h
 -
 string.h
--
-unistd.h
 -
 fcntl.h
 -
 errno.h
 -
 termios.h
--
-iostream
 -
 
