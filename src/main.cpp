@@ -43,6 +43,9 @@ int main( int argc, const char** argv ) {
   CvCapture* capture;
   cv::Mat frame;
 
+  cv::namedWindow(main_window_name,CV_WINDOW_NORMAL);
+  cv::moveWindow(main_window_name, 400, 100);
+
   //Initialize Mouse objects
   Display *display = XOpenDisplay(0);
   Window root = DefaultRootWindow(display);
@@ -394,7 +397,7 @@ vector<int> findEyes(cv::Mat frame_gray, cv::Rect face) {
     circle(faceROI, rightRightCorner, 3, 200);
   }
 
-  //imshow(face_window_name, faceROI);
+  imshow(main_window_name, faceROI);
   vector<int> result;
   result.push_back(leftPupil.x);
   result.push_back(leftPupil.y);
