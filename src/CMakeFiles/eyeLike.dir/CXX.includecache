@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/alex/eyeLike/src/constants.h
+/home/alex/KeyboardGloves/src/constants.h
 
-/home/alex/eyeLike/src/findEyeCenter.h
+/home/alex/KeyboardGloves/src/findEyeCenter.h
 opencv2/imgproc/imgproc.hpp
-/home/alex/eyeLike/src/opencv2/imgproc/imgproc.hpp
+/home/alex/KeyboardGloves/src/opencv2/imgproc/imgproc.hpp
 
-/home/alex/eyeLike/src/findEyeCorner.h
+/home/alex/KeyboardGloves/src/findEyeCorner.h
 opencv2/imgproc/imgproc.hpp
-/home/alex/eyeLike/src/opencv2/imgproc/imgproc.hpp
+/home/alex/KeyboardGloves/src/opencv2/imgproc/imgproc.hpp
 
-/home/alex/eyeLike/src/main.cpp
+/home/alex/KeyboardGloves/src/main.cpp
 opencv2/objdetect/objdetect.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -32,11 +32,11 @@ stdio.h
 math.h
 -
 constants.h
-/home/alex/eyeLike/src/constants.h
+/home/alex/KeyboardGloves/src/constants.h
 findEyeCenter.h
-/home/alex/eyeLike/src/findEyeCenter.h
+/home/alex/KeyboardGloves/src/findEyeCenter.h
 findEyeCorner.h
-/home/alex/eyeLike/src/findEyeCorner.h
+/home/alex/KeyboardGloves/src/findEyeCorner.h
 unistd.h
 -
 X11/Xlib.h

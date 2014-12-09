@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/eyeLike
+CMAKE_SOURCE_DIR = /home/alex/KeyboardGloves
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/eyeLike
+CMAKE_BINARY_DIR = /home/alex/KeyboardGloves
 
 #=============================================================================
 # Directory level rules for directory src
@@ -74,7 +74,7 @@ src/preinstall:
 src/CMakeFiles/eyeLike.dir/all:
 	$(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/depend
 	$(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/eyeLike/CMakeFiles  1 2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles  1 2 3 4
 	@echo "Built target eyeLike"
 .PHONY : src/CMakeFiles/eyeLike.dir/all
 
@@ -84,9 +84,9 @@ all: src/CMakeFiles/eyeLike.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/eyeLike.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/eyeLike/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/KeyboardGloves/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/eyeLike.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/eyeLike/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/KeyboardGloves/CMakeFiles 0
 .PHONY : src/CMakeFiles/eyeLike.dir/rule
 
 # Convenience name for target.

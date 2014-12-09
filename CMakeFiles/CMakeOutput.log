@@ -363,3 +363,93 @@ make[2]: Leaving directory `/home/alex/eyeLike/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/alex/eyeLike/CMakeFiles/CMakeTmp'
 
 
+Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
+Change Dir: /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3343349030/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3343349030.dir/build.make CMakeFiles/cmTryCompileExec3343349030.dir/build
+make[1]: Entering directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3343349030.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3343349030.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3343349030
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3343349030.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3343349030.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3343349030 -rdynamic -lX11 -lXext 
+make[1]: Leaving directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec731844863/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec731844863.dir/build.make CMakeFiles/cmTryCompileExec731844863.dir/build
+make[1]: Entering directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec731844863.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec731844863.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec731844863
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec731844863.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec731844863.dir/CheckFunctionExists.c.o  -o cmTryCompileExec731844863 -rdynamic 
+make[1]: Leaving directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec128976500/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec128976500.dir/build.make CMakeFiles/cmTryCompileExec128976500.dir/build
+make[1]: Entering directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec128976500.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec128976500.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec128976500
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec128976500.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec128976500.dir/CheckFunctionExists.c.o  -o cmTryCompileExec128976500 -rdynamic 
+make[1]: Leaving directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1359610793/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1359610793.dir/build.make CMakeFiles/cmTryCompileExec1359610793.dir/build
+make[1]: Entering directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1359610793.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1359610793.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1359610793
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1359610793.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1359610793.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1359610793 -rdynamic 
+make[1]: Leaving directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3540682641/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3540682641.dir/build.make CMakeFiles/cmTryCompileExec3540682641.dir/build
+make[1]: Entering directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3540682641.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec3540682641.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3540682641
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3540682641.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec3540682641.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3540682641 -rdynamic 
+make[1]: Leaving directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2815909537/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2815909537.dir/build.make CMakeFiles/cmTryCompileExec2815909537.dir/build
+make[1]: Entering directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2815909537.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec2815909537.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2815909537
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2815909537.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec2815909537.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2815909537 -rdynamic -lICE 
+make[1]: Leaving directory `/home/alex/KeyboardGloves/CMakeFiles/CMakeTmp'
+
+

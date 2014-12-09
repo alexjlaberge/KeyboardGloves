@@ -1,1 +1,1 @@
-/home/alex/eyeLike/src/CMakeFiles/eyeLike.dir
+/home/alex/KeyboardGloves/src/CMakeFiles/eyeLike.dir

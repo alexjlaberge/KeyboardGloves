@@ -26,10 +26,13 @@
 
 /** Function Headers */
 std::vector<int> detectAndDisplay( cv::Mat frame );
+//void secondaryDetect( Mat frame );
 
 /** Global variables */
 cv::String face_cascade_name = "../res/haarcascade_frontalface_alt.xml";
 cv::CascadeClassifier face_cascade;
+cv::String eyes_cascade_name = "../res/haarcascade_eye_tree_eyeglasses.xml";
+cv::CascadeClassifier eyes_cascade;
 std::string main_window_name = "Capture - Face detection";
 std::string face_window_name = "Capture - Face";
 cv::RNG rng(12345);
@@ -37,6 +40,7 @@ cv::Mat debugImage;
 cv::Mat skinCrCbHist = cv::Mat::zeros(cv::Size(256, 256), CV_8UC1);
 
 using namespace std;
+using namespace cv;
 
 int main( int argc, const char** argv ) {
   //Initialize Imaging objects  
@@ -188,12 +192,16 @@ int main( int argc, const char** argv ) {
       // Apply the classfier to the frame
       if( !frame.empty() ) {
         result = detectAndDisplay( frame );
+        //secondaryDetect(frame);
       }
       else 
       {
         printf(" --(!) No captured frame -- Break!");
         break;
       }
+      imshow(main_window_name,debugImage);
+
+      int d = cv::waitKey(10);
 
       //120 ... 130 ... 140
       //0 ... 960 ... 1920 for x
@@ -308,7 +316,7 @@ int main( int argc, const char** argv ) {
       }
       
       //Move mouse based on imaging
-      XWarpPointer(display, None, root, 0, 0, 0, 0, 960 + i , 540);
+      //XWarpPointer(display, None, root, 0, 0, 0, 0, 960 + i , 540);
       XFlush(display);
 
       //Reset the results vector
@@ -395,9 +403,10 @@ vector<int> findEyes(cv::Mat frame_gray, cv::Rect face) {
     circle(faceROI, leftLeftCorner, 3, 200);
     circle(faceROI, rightLeftCorner, 3, 200);
     circle(faceROI, rightRightCorner, 3, 200);
+  
   }
 
-  imshow(main_window_name, faceROI);
+  imshow(face_window_name, faceROI);
   vector<int> result;
   result.push_back(leftPupil.x);
   result.push_back(leftPupil.y);
@@ -461,3 +470,36 @@ vector<int> detectAndDisplay( cv::Mat frame )
   }
   return result;
 }
+
+/*void secondaryDetect( Mat frame )
+{
+  std::vector<Rect> faces;
+  Mat frame_gray;
+
+  cvtColor( frame, frame_gray, CV_BGR2GRAY );
+  equalizeHist( frame_gray, frame_gray );
+
+  //-- Detect faces
+  face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, Size(30, 30) );
+
+  for( size_t i = 0; i < faces.size(); i++ )
+  {
+    Point center( faces[i].x + faces[i].width*0.5, faces[i].y + faces[i].height*0.5 );
+    ellipse( frame, center, Size( faces[i].width*0.5, faces[i].height*0.5), 0, 0, 360, Scalar( 255, 0, 255 ), 4, 8, 0 );
+
+    Mat faceROI = frame_gray( faces[i] );
+    std::vector<Rect> eyes;
+
+    //-- In each face, detect eyes
+    eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(30, 30) );
+
+    for( size_t j = 0; j < eyes.size(); j++ )
+     {
+       Point center( faces[i].x + eyes[j].x + eyes[j].width*0.5, faces[i].y + eyes[j].y + eyes[j].height*0.5 );
+       int radius = cvRound( (eyes[j].width + eyes[j].height)*0.25 );
+       circle( frame, center, radius, Scalar( 255, 0, 0 ), 4, 8, 0 );
+     }
+  }
+  //-- Show what you got
+  imshow( "NewDetect", frame );
+ }*/

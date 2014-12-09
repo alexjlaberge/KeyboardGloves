@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/eyeLike
+CMAKE_SOURCE_DIR = /home/alex/KeyboardGloves
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/eyeLike
+CMAKE_BINARY_DIR = /home/alex/KeyboardGloves
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alex/eyeLike && $(CMAKE_COMMAND) -E cmake_progress_start /home/alex/eyeLike/CMakeFiles /home/alex/eyeLike/src/CMakeFiles/progress.marks
-	cd /home/alex/eyeLike && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/eyeLike/CMakeFiles 0
+	cd /home/alex/KeyboardGloves && $(CMAKE_COMMAND) -E cmake_progress_start /home/alex/KeyboardGloves/CMakeFiles /home/alex/KeyboardGloves/src/CMakeFiles/progress.marks
+	cd /home/alex/KeyboardGloves && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/KeyboardGloves/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alex/eyeLike && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/alex/KeyboardGloves && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alex/eyeLike && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/alex/KeyboardGloves && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alex/eyeLike && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/alex/KeyboardGloves && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alex/eyeLike && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alex/KeyboardGloves && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/eyeLike.dir/rule:
-	cd /home/alex/eyeLike && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/eyeLike.dir/rule
+	cd /home/alex/KeyboardGloves && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/eyeLike.dir/rule
 .PHONY : src/CMakeFiles/eyeLike.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ eyeLike: src/CMakeFiles/eyeLike.dir/rule
 
 # fast build rule for target.
 eyeLike/fast:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/build
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/build
 .PHONY : eyeLike/fast
 
 findEyeCenter.o: findEyeCenter.cpp.o
@@ -117,7 +117,7 @@ findEyeCenter.o: findEyeCenter.cpp.o
 
 # target to build an object file
 findEyeCenter.cpp.o:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o
 .PHONY : findEyeCenter.cpp.o
 
 findEyeCenter.i: findEyeCenter.cpp.i
@@ -125,7 +125,7 @@ findEyeCenter.i: findEyeCenter.cpp.i
 
 # target to preprocess a source file
 findEyeCenter.cpp.i:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.i
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.i
 .PHONY : findEyeCenter.cpp.i
 
 findEyeCenter.s: findEyeCenter.cpp.s
@@ -133,7 +133,7 @@ findEyeCenter.s: findEyeCenter.cpp.s
 
 # target to generate assembly for a file
 findEyeCenter.cpp.s:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.s
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.s
 .PHONY : findEyeCenter.cpp.s
 
 findEyeCorner.o: findEyeCorner.cpp.o
@@ -141,7 +141,7 @@ findEyeCorner.o: findEyeCorner.cpp.o
 
 # target to build an object file
 findEyeCorner.cpp.o:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o
 .PHONY : findEyeCorner.cpp.o
 
 findEyeCorner.i: findEyeCorner.cpp.i
@@ -149,7 +149,7 @@ findEyeCorner.i: findEyeCorner.cpp.i
 
 # target to preprocess a source file
 findEyeCorner.cpp.i:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.i
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.i
 .PHONY : findEyeCorner.cpp.i
 
 findEyeCorner.s: findEyeCorner.cpp.s
@@ -157,7 +157,7 @@ findEyeCorner.s: findEyeCorner.cpp.s
 
 # target to generate assembly for a file
 findEyeCorner.cpp.s:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.s
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.s
 .PHONY : findEyeCorner.cpp.s
 
 helpers.o: helpers.cpp.o
@@ -165,7 +165,7 @@ helpers.o: helpers.cpp.o
 
 # target to build an object file
 helpers.cpp.o:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/helpers.cpp.o
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/helpers.cpp.o
 .PHONY : helpers.cpp.o
 
 helpers.i: helpers.cpp.i
@@ -173,7 +173,7 @@ helpers.i: helpers.cpp.i
 
 # target to preprocess a source file
 helpers.cpp.i:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/helpers.cpp.i
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/helpers.cpp.i
 .PHONY : helpers.cpp.i
 
 helpers.s: helpers.cpp.s
@@ -181,7 +181,7 @@ helpers.s: helpers.cpp.s
 
 # target to generate assembly for a file
 helpers.cpp.s:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/helpers.cpp.s
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/helpers.cpp.s
 .PHONY : helpers.cpp.s
 
 main.o: main.cpp.o
@@ -189,7 +189,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/main.cpp.o
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -197,7 +197,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/main.cpp.i
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -205,7 +205,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/alex/eyeLike && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/main.cpp.s
+	cd /home/alex/KeyboardGloves && $(MAKE) -f src/CMakeFiles/eyeLike.dir/build.make src/CMakeFiles/eyeLike.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -240,6 +240,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alex/eyeLike && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alex/KeyboardGloves && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

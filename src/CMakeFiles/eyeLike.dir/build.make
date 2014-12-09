@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/eyeLike
+CMAKE_SOURCE_DIR = /home/alex/KeyboardGloves
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/eyeLike
+CMAKE_BINARY_DIR = /home/alex/KeyboardGloves
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/eyeLike.dir/depend.make
@@ -51,17 +51,17 @@ include src/CMakeFiles/eyeLike.dir/flags.make
 
 src/CMakeFiles/eyeLike.dir/main.cpp.o: src/CMakeFiles/eyeLike.dir/flags.make
 src/CMakeFiles/eyeLike.dir/main.cpp.o: src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/eyeLike/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/eyeLike.dir/main.cpp.o"
-	cd /home/alex/eyeLike/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/main.cpp.o -c /home/alex/eyeLike/src/main.cpp
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/main.cpp.o -c /home/alex/KeyboardGloves/src/main.cpp
 
 src/CMakeFiles/eyeLike.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/eyeLike.dir/main.cpp.i"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/eyeLike/src/main.cpp > CMakeFiles/eyeLike.dir/main.cpp.i
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/KeyboardGloves/src/main.cpp > CMakeFiles/eyeLike.dir/main.cpp.i
 
 src/CMakeFiles/eyeLike.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eyeLike.dir/main.cpp.s"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/eyeLike/src/main.cpp -o CMakeFiles/eyeLike.dir/main.cpp.s
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/KeyboardGloves/src/main.cpp -o CMakeFiles/eyeLike.dir/main.cpp.s
 
 src/CMakeFiles/eyeLike.dir/main.cpp.o.requires:
 .PHONY : src/CMakeFiles/eyeLike.dir/main.cpp.o.requires
@@ -74,17 +74,17 @@ src/CMakeFiles/eyeLike.dir/main.cpp.o.provides.build: src/CMakeFiles/eyeLike.dir
 
 src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o: src/CMakeFiles/eyeLike.dir/flags.make
 src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o: src/findEyeCenter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/eyeLike/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o"
-	cd /home/alex/eyeLike/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o -c /home/alex/eyeLike/src/findEyeCenter.cpp
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o -c /home/alex/KeyboardGloves/src/findEyeCenter.cpp
 
 src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/eyeLike.dir/findEyeCenter.cpp.i"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/eyeLike/src/findEyeCenter.cpp > CMakeFiles/eyeLike.dir/findEyeCenter.cpp.i
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/KeyboardGloves/src/findEyeCenter.cpp > CMakeFiles/eyeLike.dir/findEyeCenter.cpp.i
 
 src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eyeLike.dir/findEyeCenter.cpp.s"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/eyeLike/src/findEyeCenter.cpp -o CMakeFiles/eyeLike.dir/findEyeCenter.cpp.s
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/KeyboardGloves/src/findEyeCenter.cpp -o CMakeFiles/eyeLike.dir/findEyeCenter.cpp.s
 
 src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o.requires:
 .PHONY : src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o.requires
@@ -97,17 +97,17 @@ src/CMakeFiles/eyeLike.dir/findEyeCenter.cpp.o.provides.build: src/CMakeFiles/ey
 
 src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o: src/CMakeFiles/eyeLike.dir/flags.make
 src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o: src/findEyeCorner.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/eyeLike/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o"
-	cd /home/alex/eyeLike/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o -c /home/alex/eyeLike/src/findEyeCorner.cpp
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o -c /home/alex/KeyboardGloves/src/findEyeCorner.cpp
 
 src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/eyeLike.dir/findEyeCorner.cpp.i"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/eyeLike/src/findEyeCorner.cpp > CMakeFiles/eyeLike.dir/findEyeCorner.cpp.i
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/KeyboardGloves/src/findEyeCorner.cpp > CMakeFiles/eyeLike.dir/findEyeCorner.cpp.i
 
 src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eyeLike.dir/findEyeCorner.cpp.s"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/eyeLike/src/findEyeCorner.cpp -o CMakeFiles/eyeLike.dir/findEyeCorner.cpp.s
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/KeyboardGloves/src/findEyeCorner.cpp -o CMakeFiles/eyeLike.dir/findEyeCorner.cpp.s
 
 src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o.requires:
 .PHONY : src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o.requires
@@ -120,17 +120,17 @@ src/CMakeFiles/eyeLike.dir/findEyeCorner.cpp.o.provides.build: src/CMakeFiles/ey
 
 src/CMakeFiles/eyeLike.dir/helpers.cpp.o: src/CMakeFiles/eyeLike.dir/flags.make
 src/CMakeFiles/eyeLike.dir/helpers.cpp.o: src/helpers.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/eyeLike/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/KeyboardGloves/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/eyeLike.dir/helpers.cpp.o"
-	cd /home/alex/eyeLike/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/helpers.cpp.o -c /home/alex/eyeLike/src/helpers.cpp
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/eyeLike.dir/helpers.cpp.o -c /home/alex/KeyboardGloves/src/helpers.cpp
 
 src/CMakeFiles/eyeLike.dir/helpers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/eyeLike.dir/helpers.cpp.i"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/eyeLike/src/helpers.cpp > CMakeFiles/eyeLike.dir/helpers.cpp.i
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/KeyboardGloves/src/helpers.cpp > CMakeFiles/eyeLike.dir/helpers.cpp.i
 
 src/CMakeFiles/eyeLike.dir/helpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eyeLike.dir/helpers.cpp.s"
-	cd /home/alex/eyeLike/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/eyeLike/src/helpers.cpp -o CMakeFiles/eyeLike.dir/helpers.cpp.s
+	cd /home/alex/KeyboardGloves/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/KeyboardGloves/src/helpers.cpp -o CMakeFiles/eyeLike.dir/helpers.cpp.s
 
 src/CMakeFiles/eyeLike.dir/helpers.cpp.o.requires:
 .PHONY : src/CMakeFiles/eyeLike.dir/helpers.cpp.o.requires
@@ -187,7 +187,7 @@ bin/eyeLike: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8
 bin/eyeLike: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8
 bin/eyeLike: src/CMakeFiles/eyeLike.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin/eyeLike"
-	cd /home/alex/eyeLike/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eyeLike.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/alex/KeyboardGloves/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eyeLike.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/eyeLike.dir/build: bin/eyeLike
@@ -200,10 +200,10 @@ src/CMakeFiles/eyeLike.dir/requires: src/CMakeFiles/eyeLike.dir/helpers.cpp.o.re
 .PHONY : src/CMakeFiles/eyeLike.dir/requires
 
 src/CMakeFiles/eyeLike.dir/clean:
-	cd /home/alex/eyeLike/src && $(CMAKE_COMMAND) -P CMakeFiles/eyeLike.dir/cmake_clean.cmake
+	cd /home/alex/KeyboardGloves/src && $(CMAKE_COMMAND) -P CMakeFiles/eyeLike.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/eyeLike.dir/clean
 
 src/CMakeFiles/eyeLike.dir/depend:
-	cd /home/alex/eyeLike && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/eyeLike /home/alex/eyeLike/src /home/alex/eyeLike /home/alex/eyeLike/src /home/alex/eyeLike/src/CMakeFiles/eyeLike.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/KeyboardGloves && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/KeyboardGloves /home/alex/KeyboardGloves/src /home/alex/KeyboardGloves /home/alex/KeyboardGloves/src /home/alex/KeyboardGloves/src/CMakeFiles/eyeLike.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/eyeLike.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/alex/eyeLike/src
+# Install script for directory: /home/alex/KeyboardGloves/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
